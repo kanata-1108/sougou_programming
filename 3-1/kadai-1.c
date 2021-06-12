@@ -2,7 +2,7 @@
 
 int main(void){
     FILE *fp;
-    char str[4][10];//[文字列数][文字列の長さのmax]
+    char str[4][10];
     int data[10][4];
     int i, num, japanese, math, english;
 
@@ -13,8 +13,6 @@ int main(void){
         return 1;
     }
 
-    //fscanfでcsvの最初の1行を読み込む
-    //%[^,]は「,」が現れるまで読み込む,%sは空白文字が現れるまで読み込む
     fscanf(fp, "%[^,],%[^,],%[^,],%s", str[0], str[1], str[2], str[3]);
     printf("%s %s %s %s\n", str[0], str[1], str[2],str[3]);
 
