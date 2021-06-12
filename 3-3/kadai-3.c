@@ -2,43 +2,29 @@
 
 int main(void){
     FILE *fp;
-    char str[4][10];//[文字列数][文字列の長さのmax]
-    int data[10][4];
-    int i, num, japanese, math, english;
-    int j, t, k, l, n = 3;
+    char *c1 = "番号";
+    char *c2 = "国語";
+    char *c3 = "数学";
+    char *c4 = "英語";
+    int n1 = 1;
+    int n2 = 10;
+    int n3 = 12;
+    int n4 = 14;
+    int i;
 
-    fp = fopen("kadai-2.csv", "r");
+    fp = fopen("kadai-3.csv", "w");
 
     if(fp == NULL){
         printf("failed\n");
         return 1;
     }
+    
+    fprintf(fp, "%s,%s,%s,%s\n", c1, c2, c3, c4);
 
-    //fscanfでcsvの最初の1行を読み込む
-    //%[^,]は「,」が現れるまで読み込む,%sは空白文字が現れるまで読み込む
-    fscanf(fp, "%[^,],%[^,],%[^,],%s", str[0], str[1], str[2], str[3]);
-    printf("%s %s %s %s\n", str[0], str[1], str[2],str[3]);
-
-    for(i = 0; i < 3;i++){
-        fscanf(fp, "%d,%d,%d,%d", &data[i][0], &data[i][1], &data[i][2], &data[i][3]);
-        printf("%d %d %d %d\n", data[i][0], data[i][1], data[i][2], data[i][3]);
+    for(i = 0; i < 5; i++){
+        fprintf(fp, "%d,%d,%d,%d\n", n1 + i, n2 + 2 * i, n3 + 2 * i, n4 + 2 * i);
     }
     fclose(fp);
-
-    for(l = 0; l < n - 1; l++){
-        for(j = n - 1; j > l; j--){
-            if(data[j-1][1] < data[j][1]){
-                for(k = 0; k < 4; k++){
-                    t = data[j][k];
-                    data[j][k] = data[j-1][k];
-                    data[j-1][k] = t;
-                }
-            }
-        }
-   }
-   for(i = 0; i < 3;i++){
-       printf("%d %d %d %d\n", data[i][0], data[i][1], data[i][2], data[i][3]);
-    }
 
     return 0;
 }

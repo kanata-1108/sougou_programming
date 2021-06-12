@@ -14,6 +14,7 @@ int main(void){
         return 1;
     }
 
+    printf("before sort\n");
     fscanf(fp, "%[^,],%[^,],%[^,],%s", str[0], str[1], str[2], str[3]);
     printf("%s %s %s %s\n", str[0], str[1], str[2],str[3]);
 
@@ -34,6 +35,10 @@ int main(void){
             }
         }
    }
+
+   printf("\n");
+   printf("after sort\n");
+   printf("%s %s %s %s\n", str[0], str[1], str[2],str[3]);
    for(i = 0; i < 3;i++){
        printf("%d %d %d %d\n", data[i][0], data[i][1], data[i][2], data[i][3]);
     }
