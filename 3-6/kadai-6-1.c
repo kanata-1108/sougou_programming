@@ -6,6 +6,7 @@ int main(void){
     int i, j, k, l;
     char str[17][100];
     float seiseki[15][17];
+    
     fp = fopen("kadai-6.csv", "r");
     after_fp = fopen("after_kadai-6.csv", "w");
 
