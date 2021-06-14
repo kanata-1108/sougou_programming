@@ -94,6 +94,7 @@ int main(void){
     printf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n",seiseki[b-1][1], seiseki[b-1][2], seiseki[b-1][3], seiseki[b-1][4], seiseki[b-1][5], seiseki[b-1][6], seiseki[b-1][7], seiseki[b-1][8], seiseki[b-1][9], seiseki[b-1][10], seiseki[b-1][11], seiseki[b-1][12], seiseki[b-1][13], seiseki[b-1][14], seiseki[b-1][15], seiseki[b-1][16], seiseki[b-1][17], seiseki[b-1][18]);
 
     fclose(fp);
+    fclose(after_fp);
 
     return 0;
 
