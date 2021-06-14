@@ -22,7 +22,7 @@ int main(void){
         fscanf(fp, "%d,%d,%d,%d", &data[i][0], &data[i][1], &data[i][2], &data[i][3]);
         printf("%d %d %d %d\n", data[i][0], data[i][1], data[i][2], data[i][3]);
     }
-    fclose(fp);
+    
 
     for(l = 0; l < n - 1; l++){
         for(j = n - 1; j > l; j--){
@@ -42,6 +42,7 @@ int main(void){
    for(i = 0; i < 3;i++){
        printf("%d %d %d %d\n", data[i][0], data[i][1], data[i][2], data[i][3]);
     }
+    fclose(fp);
 
     return 0;
 }
