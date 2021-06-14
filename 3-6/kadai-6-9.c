@@ -60,7 +60,7 @@ int main(void){
     int tmp;
 
     fp = fopen("kadai-6.csv", "r");
-    after_fp = fopen("after_kadai-6.csv", "w");
+    after_fp = fopen("sort.dat", "w");
 
     if(fp == NULL && after_fp == NULL){
         printf("failed\n");
