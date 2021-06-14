@@ -4,8 +4,6 @@ FILE *fp;
 FILE *after_fp;
 char str[18][100];
 int seiseki[15][19];
-float kiroku_kanzan = 700.0 / 49.0;
-int average_value;
 char *soten = "素点";
 char *kiroku = "記録点";
 char *num = "受験番号";
@@ -14,6 +12,8 @@ char *sougou = "総合点";
 char *average = "平均点";
 char *gouhi = "合否";
 char *juni = "順位";
+float kiroku_kanzan = 700.0 / 49.0;
+int average_value;
 
 int func(void){
     int i, j, k, l, m, n, t = 0;
