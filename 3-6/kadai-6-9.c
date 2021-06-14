@@ -56,7 +56,7 @@ int func(void){
     }   
 }
 int main(void){
-    int i, j, l, t, a, d;
+    int i, j, l, t, a, b;
     int tmp;
 
     fp = fopen("kadai-6.csv", "r");
@@ -89,10 +89,9 @@ int main(void){
         seiseki[i][0], seiseki[i][1], seiseki[i][2], seiseki[i][3], seiseki[i][4], seiseki[i][5], seiseki[i][6], seiseki[i][7], seiseki[i][8], seiseki[i][9], seiseki[i][10], seiseki[i][11], seiseki[i][12], seiseki[i][13], seiseki[i][14], seiseki[i][15], seiseki[i][16], seiseki[i][17], seiseki[i][18]);
     }
     printf("受験番号を入力してください\n");
-    scanf("%d", &d);
-
+    scanf("%d", &b);
     printf("国語点数 数学点数 英語点数 国語成績 社会成績 数学成績 理科成績 音楽成績 美術成績 保健体育成績 技術家庭成績 英語成績 素点　記録点　換算記録点　総合点　合否　順位\n");
-    printf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n",seiseki[d][1], seiseki[d][2], seiseki[d][3], seiseki[d][4], seiseki[d][5], seiseki[d][6], seiseki[d][7], seiseki[d][8], seiseki[d][9], seiseki[d][10], seiseki[d][11], seiseki[d][12], seiseki[d][13], seiseki[d][14], seiseki[d][15], seiseki[d][16], seiseki[d][17], seiseki[d][18]);
+    printf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n",seiseki[b-1][1], seiseki[b-1][2], seiseki[b-1][3], seiseki[b-1][4], seiseki[b-1][5], seiseki[b-1][6], seiseki[b-1][7], seiseki[b-1][8], seiseki[b-1][9], seiseki[b-1][10], seiseki[b-1][11], seiseki[b-1][12], seiseki[b-1][13], seiseki[b-1][14], seiseki[b-1][15], seiseki[b-1][16], seiseki[b-1][17], seiseki[b-1][18]);
 
     fclose(fp);
 
